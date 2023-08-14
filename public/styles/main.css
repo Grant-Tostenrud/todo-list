@@ -1,0 +1,12 @@
+/* body {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  min-height: 95vh;
+} */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}

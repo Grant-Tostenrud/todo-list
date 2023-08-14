@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+
+<% if (locals.items) { %>
+  <div class="form-check">
+  <%items.forEach((item)=> { %>
+      <input class="form-check-input" type="checkbox" value=<% item %> id=<% item %>>
+      <label class="form-check-label" for="flexCheckDefault">
+        <%= item %>
+      </label>
+      <br/>
+  <%}) %>
+  </div>
+<% } %>
+
+<form class="row g-2" action="/work" method="POST">
+  <div class="col-auto">
+    <input type="text" class="form-control" name="todoItem" placeholder="To-do item">
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary">+</button>
+  </div>
+</form>
+
+</div>
+
+<%- include("partials/footer.ejs") %>
